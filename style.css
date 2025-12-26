@@ -1,3 +1,8 @@
+/* * SMART HEALTH TRACKER - STYLESHEET (CSS)
+ * Copyright (c) 2025 Ica Asri Lestari
+ * All rights reserved.
+ * * Tema: Makanan Hijau (Green Food Theme).
+ */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -38,7 +43,7 @@ main {
     display: none;
 }
 
-/* Fixed Bottom Navigation (Tahap 1) */
+/* Fixed Bottom Navigation (Tahap 1 & 5) */
 #main-nav {
     position: fixed;
     bottom: 0;
@@ -73,7 +78,7 @@ main {
 
 #main-nav button:hover,
 #main-nav button.active {
-    color: #4CAF50;
+    color: #4CAF50; /* Pastikan tombol aktif berwarna hijau */
 }
 
 /* ==================================== */
@@ -256,77 +261,17 @@ main {
     border: none !important;
     border-left: none !important;
 }
-/* Dalam bagian #main-nav button */
-#main-nav button:hover,
-#main-nav button.active {
-    color: #4CAF50; /* Pastikan tombol aktif berwarna hijau */
-}
+
 /* ==================================== */
-/* Recipe Suggester Styles (Tahap 4) */
+/* Footer Styles (New Addition) */
 /* ==================================== */
-#recipe-input-area {
-    background-color: #fff3e0; /* Light Orange/Yellow background */
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#ingredient-input {
-    padding: 10px;
-    border: 1px solid #ffcc80; 
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#search-recipe-button {
-    padding: 10px;
-    border: none;
-    background-color: #FF9800; /* Orange button color */
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#suggested-recipes-list {
-    list-style: none;
-    padding: 0;
-}
-
-#suggested-recipes-list li {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-left: 5px solid #FF9800; /* Orange accent bar */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-#suggested-recipes-list li:hover {
-    background-color: #fffaf0;
-}
-
-.recipe-details h4 {
-    margin: 0 0 5px 0;
-    color: #FF9800;
-}
-
-.missing-ingredients {
-    font-size: 0.9em;
-    color: #D32F2F; /* Red for missing items */
-    margin-top: 5px;
-}
-
-.placeholder-text {
-    font-style: italic;
-    color: #999;
+footer {
     text-align: center;
-    border: none !important;
-    border-left: none !important;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #555;
+    /* Memberikan warna hijau terang sesuai tema */
+    background-color: #e8f5e9; 
+    border-top: 1px solid #c8e6c9;
 }

@@ -1,3 +1,9 @@
+/* * SMART HEALTH TRACKER - JAVASCRIPT LOGIC
+ * Copyright (c) 2025 Ica Asri Lestari
+ * All rights reserved.
+ * * Modul ini berisi semua logika JavaScript untuk fitur Water Tracker, 
+ * Food Journal, dan Recipe Suggester.
+ */
 document.addEventListener('DOMContentLoaded', () => {
 
     // =======================================================
