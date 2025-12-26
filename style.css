@@ -1,0 +1,332 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9; /* Light Green background */
+    color: #212121;
+}
+
+header {
+    background-color: #388e3c; /* Darker Green header */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 20px;
+    margin-bottom: 70px; /* Space for the fixed navigation */
+}
+
+.app-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.app-section h2 {
+    color: #4CAF50; /* Green highlight for section titles */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Fixed Bottom Navigation (Tahap 1) */
+#main-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    padding: 5px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure nav is on top */
+}
+
+#main-nav button {
+    background: none;
+    border: none;
+    padding: 10px;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+#main-nav button i {
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+
+#main-nav button:hover,
+#main-nav button.active {
+    color: #4CAF50;
+}
+
+/* ==================================== */
+/* Water Tracker Styles (Tahap 2) */
+/* ==================================== */
+#water-progress-bar-container {
+    background-color: #e0f7fa; /* Very light blue */
+    border-radius: 10px;
+    height: 20px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+#water-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #03A9F4; /* Primary Blue Water color */
+    transition: width 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.water-input-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.water-input-controls button {
+    padding: 10px;
+    border: none;
+    background-color: #03A9F4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.water-input-controls input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex-grow: 2;
+    min-width: 100px;
+}
+
+/* ==================================== */
+/* Food Journal Styles (Tahap 3) */
+/* ==================================== */
+#add-food-entry {
+    background-color: #f1f8e9; /* Lightest Green for input box */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-food-entry input[type="text"],
+#add-food-entry select {
+    padding: 10px;
+    border: 1px solid #c8e6c9; /* Green border */
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#log-meal-button {
+    padding: 10px;
+    border: none;
+    background-color: #8BC34A; /* Key Food/Health Green */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#food-log-list {
+    list-style: none;
+    padding: 0;
+}
+
+#food-log-list li {
+    background-color: white;
+    border: 1px solid #e8f5e9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #8BC34A; /* Green accent bar */
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-details {
+    flex-grow: 1;
+}
+
+.food-photo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-left: 15px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.meal-type {
+    font-weight: bold;
+    color: #388e3c; /* Darker green for meal type */
+}
+/* ==================================== */
+/* Recipe Suggester Styles (Tahap 4) */
+/* ==================================== */
+#recipe-input-area {
+    background-color: #fff3e0; /* Light Orange/Yellow background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#ingredient-input {
+    padding: 10px;
+    border: 1px solid #ffcc80; 
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#search-recipe-button {
+    padding: 10px;
+    border: none;
+    background-color: #FF9800; /* Orange button color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#suggested-recipes-list {
+    list-style: none;
+    padding: 0;
+}
+
+#suggested-recipes-list li {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #FF9800; /* Orange accent bar */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#suggested-recipes-list li:hover {
+    background-color: #fffaf0;
+}
+
+.recipe-details h4 {
+    margin: 0 0 5px 0;
+    color: #FF9800;
+}
+
+.missing-ingredients {
+    font-size: 0.9em;
+    color: #D32F2F; /* Red for missing items */
+    margin-top: 5px;
+}
+
+.placeholder-text {
+    font-style: italic;
+    color: #999;
+    text-align: center;
+    border: none !important;
+    border-left: none !important;
+}
+/* Dalam bagian #main-nav button */
+#main-nav button:hover,
+#main-nav button.active {
+    color: #4CAF50; /* Pastikan tombol aktif berwarna hijau */
+}
+/* ==================================== */
+/* Recipe Suggester Styles (Tahap 4) */
+/* ==================================== */
+#recipe-input-area {
+    background-color: #fff3e0; /* Light Orange/Yellow background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#ingredient-input {
+    padding: 10px;
+    border: 1px solid #ffcc80; 
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#search-recipe-button {
+    padding: 10px;
+    border: none;
+    background-color: #FF9800; /* Orange button color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#suggested-recipes-list {
+    list-style: none;
+    padding: 0;
+}
+
+#suggested-recipes-list li {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #FF9800; /* Orange accent bar */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#suggested-recipes-list li:hover {
+    background-color: #fffaf0;
+}
+
+.recipe-details h4 {
+    margin: 0 0 5px 0;
+    color: #FF9800;
+}
+
+.missing-ingredients {
+    font-size: 0.9em;
+    color: #D32F2F; /* Red for missing items */
+    margin-top: 5px;
+}
+
+.placeholder-text {
+    font-style: italic;
+    color: #999;
+    text-align: center;
+    border: none !important;
+    border-left: none !important;
+}

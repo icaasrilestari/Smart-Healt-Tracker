@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Health & Food Tracker</h1>
+    </header>
+
+    <main id="app-content">
+        <section id="water-tracker-section" class="app-section active">
+            <h2>💧 Daily Water Intake</h2>
+            <div id="water-status">
+                <p>Today's Goal: <span id="water-goal">2000</span> ml</p>
+                <p>Consumed: <span id="water-consumed">0</span> ml</p>
+                <div id="water-progress-bar-container">
+                    <div id="water-progress-bar"></div>
+                </div>
+            </div>
+            <div class="water-input-controls">
+                <button data-amount="250">+250 ml</button>
+                <button data-amount="500">+500 ml</button>
+                <input type="number" id="custom-water-input" placeholder="Custom ml">
+                <button id="add-custom-water">Add Custom</button>
+            </div>
+        </section>
+
+        <section id="food-journal-section" class="app-section hidden">
+            <h2>🍽️ Simple Food Journal</h2>
+
+            <div id="add-food-entry">
+                <h3>Log New Meal</h3>
+                <select id="meal-type-input">
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Snack">Snack</option>
+                </select>
+                <input type="text" id="food-description-input" placeholder="What did you eat? (e.g., Chicken Salad)">
+                <input type="text" id="food-photo-input" placeholder="Photo URL (Optional)">
+                <button id="log-meal-button">Log Meal</button>
+            </div>
+
+            <h3>Today's Log</h3>
+            <ul id="food-log-list">
+                </ul>
+        </section>
+
+       <section id="recipe-suggester-section" class="app-section hidden">
+    <h2>🍲 Smart Recipe Suggester</h2>
+
+    <div id="recipe-input-area">
+        <h3>What ingredients do you have?</h3>
+        <input type="text" id="ingredient-input" placeholder="e.g., chicken, onion, tomato" aria-label="Ingredients list">
+        <button id="search-recipe-button">Find Recipes</button>
+    </div>
+
+    <h3>Suggested Recipes</h3>
+    <ul id="suggested-recipes-list">
+        <li class="placeholder-text">Enter ingredients above to find matching recipes!</li>
+    </ul>
+</section>
+
+    <h3>Suggested Recipes</h3>
+    <ul id="suggested-recipes-list">
+        <li class="placeholder-text">Enter ingredients above to find matching recipes!</li>
+    </ul>
+</section>
+    <nav id="main-nav">
+        <button data-section="water-tracker-section">
+            <i class="fas fa-tint"></i> Water
+        </button>
+        <button data-section="food-journal-section">
+            <i class="fas fa-utensils"></i> Food
+        </button>
+        <button data-section="recipe-suggester-section">
+            <i class="fas fa-book"></i> Recipes
+        </button>
+    </nav>
+    
+    <script src="script.js"></script>
+</body>
+</html>
